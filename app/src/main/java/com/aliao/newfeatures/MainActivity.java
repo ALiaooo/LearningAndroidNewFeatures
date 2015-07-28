@@ -1,5 +1,6 @@
 package com.aliao.newfeatures;
 
+import android.content.Intent;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.aliao.newfeatures.activity.CoordinatorLayoutActivity;
+
 /**
  * 1.DrawLayout
  * 2.FloatActionButton
@@ -23,7 +26,7 @@ import android.widget.FrameLayout;
  * 5.AppBarLayout
  * 6.TabLayout
  * 7.NestedScrollView
- * 8.CollapsingToolbarLayout
+ * 8.CollapsingToolbarLayout：如果想制造Toolbar的折叠效果，必须把Toolbar放在CollapsingToolLayout
  * 9.NavigationView
  */
 public class MainActivity extends AppCompatActivity {
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 int id = menuItem.getItemId();
                 switch (id){
                     case R.id.navItem1:
+                        startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
                         break;
                     case R.id.navItem2:
                         break;

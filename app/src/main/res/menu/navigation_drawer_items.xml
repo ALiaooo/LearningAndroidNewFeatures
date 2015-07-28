@@ -5,7 +5,7 @@
         <item
             android:id="@+id/navItem1"
             android:icon="@mipmap/ic_action_location_found_dark"
-            android:title="Home"/>
+            android:title="CoordinatorLayout"/>
         <item
             android:id="@+id/navItem2"
             android:icon="@mipmap/ic_action_location_found_dark"
