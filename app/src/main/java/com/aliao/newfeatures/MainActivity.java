@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.aliao.newfeatures.activity.CoordinatorLayoutActivity;
+import com.aliao.newfeatures.activity.TabLayoutActivity;
 
 /**
  * 1.DrawLayout
@@ -28,6 +29,7 @@ import com.aliao.newfeatures.activity.CoordinatorLayoutActivity;
  * 7.NestedScrollView
  * 8.CollapsingToolbarLayout：如果想制造Toolbar的折叠效果，必须把Toolbar放在CollapsingToolLayout
  * 9.NavigationView
+ * http://mrfufufu.github.io/android/2015/07/01/Codelab_Android_Design_Support_Library/
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -84,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
                         break;
                     case R.id.navItem2:
+                        startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
                         break;
                     case R.id.navItem3:
                         break;

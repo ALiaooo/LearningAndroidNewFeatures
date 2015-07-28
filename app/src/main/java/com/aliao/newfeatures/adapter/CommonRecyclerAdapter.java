@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.aliao.newfeatures.R;
 
 /**
- * Created by 丽双 on 2015/7/28.
+ * Created by ALiao on 2015/7/28.
  */
 public class CommonRecyclerAdapter extends RecyclerView.Adapter<CommonRecyclerAdapter.ViewHolder> {
 

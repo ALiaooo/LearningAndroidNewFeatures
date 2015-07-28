@@ -14,6 +14,8 @@ import com.aliao.newfeatures.adapter.CommonRecyclerAdapter;
 
 /**
  * Created by ALiao on 2015/7/28.
+ * https://developer.android.com/reference/android/support/design/widget/CoordinatorLayout.html
+ * https://guides.codepath.com/android/Handling-Scrolls-with-CoordinatorLayout#floating-action-buttons-and-snackbars
  * CoordinatorLayout是一个超强的FrameLayout
  * 他主要的两个作用就是：
  * 1.作为应用的根布局 As a top-levelapplication decor or chrome layout
