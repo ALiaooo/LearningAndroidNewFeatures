@@ -17,9 +17,11 @@ import com.aliao.newfeatures.adapter.TabPagerAdapter;
  *  1.app:tabTextColor：Tab未被选中字体的颜色
  *  2.app:tabSelectedTextColor：Tab被选中字体的颜色
  *  3.app:tabIndicatorColor：Tab指示器下标的颜色
+ *  2.app:tabBackground：Tab背景颜色
  *
- * 2.Tab Mode
- *  xml里设置app:tabMode
+ * 2.Tab Mode和Tab Gravity
+ *  mode: xml里设置app:tabMode="fixed/scrollable"，fixed固定显示在当前可视屏幕上，适用于少数tab并且显示所有tab，如果tab很多的话，所有tab都挤在一起了，所以对于tab很多的情况选择可以滚动tab的scrollable
+ *  gravity: app:tabGravity="fill/center"，如果想要平均分配当前屏幕的可用空间给每一个tab使用fill，如tab要居中显示则选择center，但是吐过tabMode选择scrollable，那么app:tabGravity这个属性会被忽略
  *
  * 3.让TabLayout和Viewpager的关联一步到位的方法
  *  mTabLayout.setupWithViewPager(mViewPager);
@@ -32,7 +34,7 @@ import com.aliao.newfeatures.adapter.TabPagerAdapter;
  * 4.setTabsFromPagerAdapter(PagerAdapter adapter)的作用
  *  Populate our tab content from the given PagerAdapter.从给定的PagerAdapter填充tab的内容
  *  源码中就这么几行代码，先把已有的tab移除，然后从PagerAdapter中通过adapter.getCount()拿到要显示tab的个数去newTab，
- *  然后再通过aadapter.getPageTitle(i)去设置tab的text
+ *  再通过adapter.getPageTitle(i)去设置tab的text
  *      public void setTabsFromPagerAdapter(@NonNull PagerAdapter adapter) {
             this.removeAllTabs();
             int i = 0;
@@ -59,7 +61,8 @@ public class TabLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablayout);
         initTab();
-        complicatedWay();
+        simpleWay();
+//        complicatedWay();
     }
 
     private void initTab() {
