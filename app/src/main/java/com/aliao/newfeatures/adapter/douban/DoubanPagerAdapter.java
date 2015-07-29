@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.aliao.newfeatures.fragment.douban.MainFragment;
+
 import java.util.List;
 
 /**
@@ -21,11 +23,16 @@ public class DoubanPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return mFragmentList.get(position);
+        return new MainFragment().newInstance();
     }
 
     @Override
     public int getCount() {
         return mTabText.length;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mTabText[position];
     }
 }
