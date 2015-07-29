@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- tab -->
+    <color name="tab_background">#302C2C</color>
+    <color name="tab_text">#797878</color>
+    <color name="tab_indicator">#1BCD6E</color>
+</resources>

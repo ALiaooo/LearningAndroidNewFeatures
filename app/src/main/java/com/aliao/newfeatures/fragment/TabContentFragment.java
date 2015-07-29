@@ -1,4 +1,4 @@
-package com.aliao.newfeatures.activity.fragment;
+package com.aliao.newfeatures.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
