@@ -12,6 +12,7 @@ import com.aliao.newfeatures.adapter.TabPagerAdapter;
  * Created by ALiao on 2015/7/28.
  * https://developer.android.com/reference/android/support/design/widget/TabLayout.html#setTabsFromPagerAdapter(android.support.v4.view.PagerAdapter)
  * http://blog.csdn.net/feiduclear_up/article/details/46500865
+ * https://guides.codepath.com/android/Google-Play-Style-Tabs-using-TabLayout
  * TabLayout
  * 1.设置颜色的属性：
  *  1.app:tabTextColor：Tab未被选中字体的颜色

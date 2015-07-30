@@ -18,6 +18,8 @@ import android.widget.FrameLayout;
 
 import com.aliao.newfeatures.activity.CoordinatorLayoutActivity;
 import com.aliao.newfeatures.activity.TabLayoutActivity;
+import com.aliao.newfeatures.activity.douban.DoubanMainActivity;
+import com.aliao.newfeatures.activity.netease.NetEaseMainActivity;
 
 /**
  * 1.DrawLayout
@@ -89,8 +91,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
                         break;
                     case R.id.navItem3:
+                        startActivity(new Intent(MainActivity.this, DoubanMainActivity.class));
                         break;
                     case R.id.navItem4:
+                        startActivity(new Intent(MainActivity.this, NetEaseMainActivity.class));
                         break;
                 }
                 return false;

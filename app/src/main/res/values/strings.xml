@@ -2,6 +2,8 @@
     <string name="app_name">LearningAndroidNewFeatures</string>
     <string name="coor_name">CoordinatorLayout</string>
     <string name="tablayout_name">TabLayout</string>
+    <string name="douban_name">Douban</string>
+    <string name="netease_name">NetEase</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

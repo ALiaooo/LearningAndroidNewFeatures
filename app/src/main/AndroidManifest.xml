@@ -23,6 +23,12 @@
         <activity
             android:name=".activity.TabLayoutActivity"
             android:label="@string/tablayout_name"/>
+        <activity
+            android:name=".activity.douban.DoubanMainActivity"
+            android:label="@string/douban_name"/>
+        <activity
+            android:name=".activity.netease.NetEaseMainActivity"
+            android:label="@string/netease_name"/>
     </application>
 
 </manifest>

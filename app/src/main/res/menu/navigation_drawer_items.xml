@@ -13,10 +13,10 @@
         <item
             android:id="@+id/navItem3"
             android:icon="@mipmap/ic_action_location_found_dark"
-            android:title="About"/>
+            android:title="Douban"/>
         <item
             android:id="@+id/navItem4"
             android:icon="@mipmap/ic_action_location_found_dark"
-            android:title="Contact"/>
+            android:title="NetEase"/>
     </group>
 </menu>
