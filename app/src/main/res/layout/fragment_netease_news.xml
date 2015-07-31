@@ -15,13 +15,40 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     -->
 
-    <android.support.design.widget.TabLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabTextColor="@color/netease_color_primary"
-        app:tabSelectedTextColor="@color/netease_tab_text"
-        app:tabIndicatorColor="@color/netease_color_primary"
-        app:tabMode="scrollable"/>
+        android:layout_height="@dimen/netease_tab_height">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/netease_tab_height"
+            android:minHeight="@dimen/netease_tab_height"
+            android:layout_toLeftOf="@+id/layout_column_edit_bg"
+            app:tabTextColor="@color/netease_news_tab_text"
+            app:tabSelectedTextColor="@color/netease_color_primary"
+            app:tabIndicatorColor="@color/netease_color_primary"
+            app:tabBackground="@color/netease_news_tab_background"
+            app:tabMode="scrollable"/>
+
+        <LinearLayout
+            android:id="@+id/layout_column_edit_bg"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_news_column_edit"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/biz_news_column_edit_arrow_down"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

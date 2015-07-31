@@ -1,17 +1,20 @@
 package com.aliao.newfeatures.fragment.netease;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.aliao.newfeatures.R;
+import com.aliao.newfeatures.adapter.netease.NewsMainPagerAdapter;
 
 /**
  * Created by ALiao on 2015/7/31.
@@ -20,9 +23,15 @@ import com.aliao.newfeatures.R;
  * 如果你想让menu菜单项显示在Toolbar上，必须手动inflate menu
  * http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1107/1925.html
  */
-public class NewsFragment extends Fragment{
+public class NewsFragment extends Fragment implements View.OnClickListener {
 
     public static final String TAG = NewsFragment.class.getSimpleName();
+    private static final int TAB_COUNT = 10;
+
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+    private NewsMainPagerAdapter mPagerAdapter;
+    private String[] mTabs = {"头条", "北京", "影视","移动互联","博客","论坛","热点","段子","娱乐","直播"};
 
     public static NewsFragment newInstance() {
 
@@ -33,6 +42,18 @@ public class NewsFragment extends Fragment{
         return fragment;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        initDataSet();
+    }
+
+    private void initDataSet() {
+        mTabs = new String[TAB_COUNT];
+        for (int i = 0; i < TAB_COUNT; i++){
+            mTabs[i] = "Tab "+i;
+        }
+    }
 
     @Nullable
     @Override
@@ -44,6 +65,13 @@ public class NewsFragment extends Fragment{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initToolbar(view);
+        mTabLayout = (TabLayout) view.findViewById(R.id.tablayout);
+        mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        mPagerAdapter = new NewsMainPagerAdapter(getFragmentManager(), mTabs);
+        mViewPager.setAdapter(mPagerAdapter);
+        mTabLayout.setupWithViewPager(mViewPager);
+        LinearLayout columnBg = (LinearLayout) view.findViewById(R.id.layout_column_edit_bg);
+        columnBg.setOnClickListener(this);
 
     }
 
@@ -65,5 +93,14 @@ public class NewsFragment extends Fragment{
                 return true;
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.layout_column_edit_bg:
+
+                break;
+        }
     }
 }
