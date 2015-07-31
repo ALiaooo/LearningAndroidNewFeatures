@@ -6,4 +6,7 @@
     <dimen name="fab_margin_right">0dp</dimen>
     <dimen name="fab_margin_bottom">0dp</dimen>
 
+    <!-- netease -->
+    <dimen name="netease_toolbar_height">40dp</dimen>
+
 </resources>
