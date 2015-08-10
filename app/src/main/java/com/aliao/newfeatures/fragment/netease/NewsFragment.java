@@ -1,5 +1,6 @@
 package com.aliao.newfeatures.fragment.netease;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.aliao.newfeatures.R;
+import com.aliao.newfeatures.activity.netease.MainMoreMenuActivity;
 import com.aliao.newfeatures.adapter.netease.NewsMainPagerAdapter;
 
 /**
@@ -87,6 +89,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
                         Snackbar.make(toolbar, "24小时要闻", Snackbar.LENGTH_SHORT).show();
                         break;
                     case R.id.action_more:
+                        startActivity(new Intent(getActivity(), MainMoreMenuActivity.class));
                         Snackbar.make(toolbar, "更多", Snackbar.LENGTH_SHORT).show();
                         break;
                 }

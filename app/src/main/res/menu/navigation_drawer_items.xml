@@ -18,5 +18,9 @@
             android:id="@+id/navItem4"
             android:icon="@mipmap/ic_action_location_found_dark"
             android:title="NetEase"/>
+        <item
+            android:id="@+id/property_animation"
+            android:icon="@mipmap/ic_action_location_found_dark"
+            android:title="PropertyAnimation"/>
     </group>
 </menu>
