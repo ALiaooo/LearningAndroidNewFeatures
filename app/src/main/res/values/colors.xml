@@ -13,4 +13,7 @@
     <color name="netease_news_tab_text">#A3A3A3</color>
     <color name="netease_news_tab_background">#FAFAFA</color>
     <color name="netease_news_column_edit_bg_pressed">#D0D0D0</color>
+
+    <color name="animator_color_first">#ff8080</color>
+    <color name="animator_color_second">#8080ff</color>
 </resources>
