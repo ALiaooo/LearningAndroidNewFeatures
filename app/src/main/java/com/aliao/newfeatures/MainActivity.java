@@ -20,6 +20,7 @@ import com.aliao.newfeatures.activity.CoordinatorLayoutActivity;
 import com.aliao.newfeatures.activity.TabLayoutActivity;
 import com.aliao.newfeatures.activity.douban.DoubanMainActivity;
 import com.aliao.newfeatures.activity.netease.NetEaseMainActivity;
+import com.aliao.newfeatures.activity.propertyanimation.AnimationsActivity;
 import com.aliao.newfeatures.activity.propertyanimation.PropertyAnimationActivity;
 
 /**
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, NetEaseMainActivity.class));
                         break;
                     case R.id.property_animation:
-                        startActivity(new Intent(MainActivity.this, PropertyAnimationActivity.class));
+                        startActivity(new Intent(MainActivity.this, AnimationsActivity.class));
                         break;
                 }
                 return false;

@@ -17,8 +17,10 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.aliao.newfeatures.R;
+import com.aliao.newfeatures.utils.L;
 
 /**
  * Created by 丽双 on 2015/8/10.
@@ -64,8 +66,31 @@ public class PropertyAnimationActivity extends AppCompatActivity {
 
         //透明度
         ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(mIvFemaleHead, "alpha", 1f, 0f, 1f);
-        alphaAnimator.setDuration(500);
-        setUpAnimation(alphaBtn,alphaAnimator, R.animator.alpha_girl_head, mIvFemaleHead);
+        alphaAnimator.setDuration(1000);
+        alphaAnimator.setRepeatCount(3);
+        alphaAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        setUpAnimation(alphaBtn, alphaAnimator, R.animator.alpha_girl_head, mIvFemaleHead);
+        alphaAnimator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                L.d("addListener - start");
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                L.d("addListener - end");
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                L.d("addListener - cancel");
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                L.d("addListener - repeat");
+            }
+        });
 
         //旋转
         ObjectAnimator rotationAnimator = ObjectAnimator.ofFloat(mIvFemaleHead, "rotation", 0, 360);
@@ -148,7 +173,6 @@ public class PropertyAnimationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isUseAnimationRes){
                     Animator anim = AnimatorInflater.loadAnimator(PropertyAnimationActivity.this, animatorResId);
-
                     anim.setTarget(targetView);
                     anim.start();
                 }else {
@@ -159,6 +183,52 @@ public class PropertyAnimationActivity extends AppCompatActivity {
 
     }
 
+
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void onValueAnimator(View view){
+        ValueAnimator animator = ValueAnimator.ofInt(1, 10);
+        animator.setDuration(10000);
+        animator.setStartDelay(5000);
+
+        animator.start();
+        L.d("isStarted = "+animator.isStarted()+", isRunning = "+animator.isRunning());
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                L.d("addUpdateListener-getAnimatedValue = " + animation.getAnimatedValue() + ", currentPlayTime = " + animation.getCurrentPlayTime() + ", animatedFraction = " + animation.getAnimatedFraction());
+            }
+        });
+
+        animator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                L.d("-------addListener- start");
+                Toast.makeText(PropertyAnimationActivity.this, "animator start", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                L.d("-------addListener- end");
+                Toast.makeText(PropertyAnimationActivity.this, "animator end", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                L.d("-------addListener- cancel");
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                L.d("-------addListener- repeat");
+            }
+        });
+    }
+
+    public void onCancelValueAnimator(View view){
+//        animator.cancel();
+    }
 
 
 }

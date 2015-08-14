@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Button"
+        android:onClick="onAddButton"/>
+    <CheckBox
+        android:id="@+id/cb_appearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appearing"/>
+    <CheckBox
+        android:id="@+id/cb_change_appearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Appearing"/>
+    <CheckBox
+        android:id="@+id/cb_disappearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disappearing"/>
+    <CheckBox
+        android:id="@+id/cb_change_disappearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Disappearing"/>
+    <CheckBox
+        android:id="@+id/cb_changeing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changing"/>
+    <CheckBox
+        android:id="@+id/cb_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

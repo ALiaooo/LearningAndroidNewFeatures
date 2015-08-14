@@ -30,7 +30,13 @@
             android:name=".activity.netease.NetEaseMainActivity"
             android:label="@string/netease_name"/>
         <activity
+            android:name=".activity.propertyanimation.AnimationsActivity"
+            android:label="@string/netease_name"/>
+        <activity
             android:name=".activity.propertyanimation.PropertyAnimationActivity"
+            android:label="@string/netease_name"/>
+        <activity
+            android:name=".activity.propertyanimation.LayoutTransitionActivity"
             android:label="@string/netease_name"/>
         <activity
             android:name=".activity.netease.MainMoreMenuActivity"

@@ -61,4 +61,17 @@
         android:layout_height="wrap_content"
         android:text=" use animation resorces"/>
 
+    <Button
+        android:id="@+id/btn_value_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ValueAnimator"
+        android:onClick="onValueAnimator"/>
+    <Button
+        android:id="@+id/btn_cancel_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel ValueAnimator"
+        android:onClick="onCancelValueAnimator"/>
+
 </LinearLayout>
