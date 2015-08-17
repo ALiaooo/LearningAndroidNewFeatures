@@ -3,6 +3,7 @@ package com.aliao.newfeatures.fragment.netease;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,6 @@ public class ReadFragment extends Fragment {
     public static ReadFragment newInstance() {
 
         Bundle args = new Bundle();
-
         ReadFragment fragment = new ReadFragment();
         fragment.setArguments(args);
         return fragment;
@@ -28,7 +28,17 @@ public class ReadFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_netease_read, container, false);
-        return v;
+        return inflater.inflate(R.layout.fragment_netease_read, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initToolbar(view);
+    }
+
+    private void initToolbar(View view) {
+        final Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+
     }
 }

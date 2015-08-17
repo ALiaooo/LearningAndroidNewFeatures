@@ -15,4 +15,10 @@
         android:text="Layout Animations"
         android:onClick="onLayoutAnim"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Transition Animations"
+        android:onClick="onActivityTransitionAnim"/>
+
 </LinearLayout>

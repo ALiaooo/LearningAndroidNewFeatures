@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="read"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/netease_toolbar_height"
+        android:minHeight="@dimen/netease_toolbar_height"
+        android:background="@color/netease_color_primary"/>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/netease_toolbar_height"
+        app:tabBackground="@color/netease_color_primary"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabGravity="scrollable"
+        >
+
+    </android.support.design.widget.AppBarLayout>
 
 </LinearLayout>

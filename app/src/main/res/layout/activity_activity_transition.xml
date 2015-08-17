@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <View
+        android:id="@+id/red_box"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_red_light"/>
+    <View
+        android:id="@+id/green_box"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_green_light"
+        android:layout_toRightOf="@id/red_box"
+        android:visibility="visible"
+        />
+    <View
+        android:id="@+id/blue_box"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_below="@id/red_box"
+        android:layout_alignLeft="@id/red_box"
+        android:visibility="visible"/>
+    <View
+        android:id="@+id/black_box"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/black"
+        android:layout_toRightOf="@id/blue_box"
+        android:layout_alignTop="@id/blue_box"/>
+<!--
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <View
+            android:id="@+id/red_box"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_red_light"/>
+        <View
+            android:id="@+id/green_box"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_green_light"/>
+        <View
+            android:id="@+id/blue_box"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_blue_light"/>
+        <View
+            android:id="@+id/black_box"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/black"/>
+    </GridLayout>-->
+
+
+</RelativeLayout>

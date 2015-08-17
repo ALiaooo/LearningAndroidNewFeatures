@@ -90,7 +90,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
                         break;
                     case R.id.action_more:
                         startActivity(new Intent(getActivity(), MainMoreMenuActivity.class));
-                        Snackbar.make(toolbar, "更多", Snackbar.LENGTH_SHORT).show();
+//                        Snackbar.make(toolbar, "更多", Snackbar.LENGTH_SHORT).show();
                         break;
                 }
                 return true;

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- common color -->
+    <color name="red">#FF0000</color>
+    <color name="black">#000000</color>
+
     <!-- douban tab -->
     <color name="tab_background">#302C2C</color>
     <color name="tab_text">#797878</color>

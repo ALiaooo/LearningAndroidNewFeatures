@@ -39,8 +39,12 @@
             android:name=".activity.propertyanimation.LayoutTransitionActivity"
             android:label="@string/netease_name"/>
         <activity
-            android:name=".activity.netease.MainMoreMenuActivity"
+            android:name=".activity.propertyanimation.ActivityTransitionActivity"
             android:label="@string/netease_name"/>
+        <activity
+            android:name=".activity.netease.MainMoreMenuActivity"
+            android:label="@string/netease_name"
+            android:theme="@style/AppTheme.Translucent"/>
     </application>
 
 </manifest>
